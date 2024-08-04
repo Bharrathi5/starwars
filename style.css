@@ -1,0 +1,105 @@
+body{
+  background-image: url("./images/703337.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header{
+  background-color: rgba(49, 52, 52, 0.708);
+  font-size: 70px;
+  margin-bottom: 40px;
+  font-weight: bolder;
+  text-align: center;
+  color: rgb(239, 215, 58);
+  text-shadow: 2px 2px 5px yellow;
+  padding: 20px;
+}
+
+
+.main{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 10px 50px;
+}
+
+.planet-card{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgba(208, 204, 204, 0.799);
+  padding: 40px;
+  margin: 20px;
+  height: auto;
+  width: 15%;
+  color: #000;
+}
+
+.planet-card h3{
+  font-weight: 800;
+  font-size: 30px;
+  padding: 20px;
+  border-bottom: 2px solid ;
+  margin-bottom: 10px;
+  margin-top: -20px;
+}
+
+.planet-card p{
+  margin: 5px;
+}
+
+.name{
+  margin: 0;
+}
+
+.planet-card button{
+  cursor: pointer;
+}
+
+.planet-card button:hover{
+  cursor: pointer;
+  background-color: black;
+}
+
+.res-btn, .back-btn{
+  margin-top: 10px;
+  padding: 15px;
+  width: 180px;
+  border: none;
+  font-size: 17px;
+  background-color: rgba(0, 0, 0, 0.632);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+.resident-list{
+  display: none;
+}
+
+
+.pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px;
+}
+
+.page{
+  cursor: pointer;
+}
+
+.page-number{
+  margin: 0 10px;
+}
+
+.pagination i.disabled{
+  color: rgba(255, 255, 255, 0.371);
+  cursor: not-allowed;
+}

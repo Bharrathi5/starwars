@@ -27,6 +27,7 @@ body{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  box-sizing: border-box;
   margin: 10px 50px;
 }
 
@@ -38,8 +39,22 @@ body{
   padding: 40px;
   margin: 20px;
   height: auto;
-  width: 15%;
+  flex-basis: 20%;
   color: #000;
+  box-sizing: border-box;
+  transition: transform 0.3s;
+}
+
+@media (max-width: 1200px) {
+  .planet-card {
+      flex-basis: 45%; 
+  }
+}
+
+@media (max-width: 768px) {
+  .planet-card {
+      flex-basis: 100%; 
+  }
 }
 
 .planet-card h3{
@@ -63,24 +78,24 @@ body{
   cursor: pointer;
 }
 
-.planet-card button:hover{
-  cursor: pointer;
-  background-color: black;
-}
-
 .res-btn, .back-btn{
   margin-top: 10px;
   padding: 15px;
   width: 180px;
   border: none;
   font-size: 17px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
   background-color: rgba(0, 0, 0, 0.632);
   color: rgb(255, 255, 255);
   border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.resident-list{
-  display: none;
+.res-btn:hover, .back-btn:hover {
+  background-color: #060606cd;
 }
 
 
@@ -103,3 +118,17 @@ body{
   color: rgba(255, 255, 255, 0.371);
   cursor: not-allowed;
 }
+
+#prev-btn:hover, #next-btn:hover {
+  background-color: #b4b6b9;
+}
+
+#prev-btn.disabled, #next-btn.disabled {
+  color: rgba(255, 255, 255, 0.371);
+  cursor: not-allowed;
+}
+
+#error {
+  color: red;
+}
+
